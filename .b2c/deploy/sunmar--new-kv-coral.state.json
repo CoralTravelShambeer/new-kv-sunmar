@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assets": {
+    "assets/banner-background.webp": {
+      "path": "assets/banner-background.webp",
+      "sha256": "83c3979c4b8a4959c9f879723cb98f0bd79928c33fd1c87e5417e79003480ba4",
+      "size": 226814,
+      "url": "https://b2ccdn.sunmar.ru/content/landing-pages/new-kv-coral/assets/banner-background.webp",
+      "managed": true
+    },
+    "assets/banner-hotel.webp": {
+      "path": "assets/banner-hotel.webp",
+      "sha256": "fd7f3774bba90f613e7a8dff62ec8c9c139277e7a3f47ce52797c7ad93013a27",
+      "size": 127752,
+      "url": "https://b2ccdn.sunmar.ru/content/landing-pages/new-kv-coral/assets/banner-hotel.webp",
+      "managed": true
+    }
+  }
+}
