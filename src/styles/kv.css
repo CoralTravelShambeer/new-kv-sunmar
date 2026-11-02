@@ -1,124 +1,93 @@
 .banner {
-  background-image: url(//b2ccdn.coral.ru/content/landing-pages/turkey/stambul/banner.webp);
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
   width: 100%;
   height: 520px;
-  position: relative;
-}
-
-@media screen and (max-width: 1280px) {
-  .banner {
-    height: 420px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .banner {
-    height: 380px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .banner {
-    height: 520px;
-    background-image: url(//b2ccdn.coral.ru/content/landing-pages/turkey/stambul/banner_m.webp);
-  }
-}
-
-.banner__content {
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding-left: 64px;
-  padding-right: 64px;
-  display: flex;
-}
-
-@media screen and (max-width: 768px) {
-  .banner__content {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .banner__content {
-    justify-content: flex-start;
-    padding: 24px;
-  }
-}
-
-.banner__title {
+  padding: 16px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #10102d url("/assets/banner-background.png") center / cover no-repeat;
+  font-family: "Museo Sans Cyrl", sans-serif;
   color: #fff;
-  margin-bottom: 12px;
-  font-size: 56px;
+}
+.banner__content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  padding: 40px 60px;
+  border-radius: 12px;
+  backdrop-filter: blur(14px);
+}
+.banner__title {
+  margin: 0 0 12px;
+  font-size: 48px;
   font-weight: 300;
   line-height: 64px;
 }
-
-@media screen and (max-width: 1280px) {
-  .banner__title {
-    font-size: 40px;
-    line-height: 48px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .banner__title {
-    font-size: 32px;
-    line-height: 40px;
-  }
-}
-
+.banner__title-mobile { display: none; }
 .banner__subtitle {
-  color: #fff;
+  margin: 0 0 12px;
   font-size: 20px;
+  font-weight: 400;
   line-height: 28px;
+  letter-spacing: 0;
 }
-
-@media screen and (max-width: 1280px) {
-  .banner__subtitle {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
 .banner__button {
-  font-weight: 600;
-  color: #000 !important;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 48px;
+  box-sizing: border-box;
+  display: inline-flex;
   align-items: center;
-  width: fit-content;
-  height: 48px;
-  margin-top: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 12px 32px;
+  border-radius: 48px;
+  background: linear-gradient(213deg, #e7317d 16%, #d8242a 84%);
+  color: #fff !important;
   font-size: 16px;
+  font-weight: 600;
   line-height: 20px;
   text-decoration: none !important;
-  display: flex;
 }
-
-.banner__button:hover {
-  color: #077dad !important;
-  border: 1px solid #077dad;
+.banner__button:hover { background: linear-gradient(213deg, #d8242a 16%, #e7317d 84%); }
+.banner__button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.banner__image {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
 }
-
-.banner__label {
-  background-color: rgba(255, 255, 255, .8);
-  border-radius: 16px;
-  align-items: center;
-  gap: 8px;
-  height: 40px;
-  padding-left: 12px;
-  padding-right: 12px;
-  display: flex;
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
+.banner__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+@media screen and (max-width: 1280px) {
+  .banner__content { padding: 24px 32px; }
+  .banner__title { font-size: 36px; line-height: 44px; }
+  .banner__subtitle { font-size: 16px; line-height: 24px; }
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 326px;
+    gap: 12px;
+    height: auto;
+    padding: 12px;
+    background-position: 63% center;
+  }
+  .banner__content { min-height: 326px; padding: 28px 32px; }
+  .banner__title { font-size: 36px; line-height: 42px; }
+  .banner__title-desktop { display: none; }
+  .banner__title-mobile { display: inline; }
+  .banner__subtitle { font-size: 16px; line-height: 24px; letter-spacing: 0; }
+  .banner__button { min-height: 32px; padding: 8px 32px; font-size: 12px; font-weight: 500; line-height: 16px; }
+}
+@media screen and (max-width: 375px) {
+  .banner__content { padding: 28px 20px; }
 }
