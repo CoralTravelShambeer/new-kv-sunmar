@@ -29,7 +29,6 @@
   font-weight: 300;
   line-height: 64px;
 }
-.banner__title-mobile { display: none; }
 .banner__subtitle {
   margin: 0 0 12px;
   font-size: 20px;
@@ -83,11 +82,15 @@
   }
   .banner__content { min-height: 326px; padding: 28px 32px; }
   .banner__title { font-size: 36px; line-height: 42px; }
-  .banner__title-desktop { display: none; }
-  .banner__title-mobile { display: inline; }
   .banner__subtitle { font-size: 16px; line-height: 24px; letter-spacing: 0; }
   .banner__button { min-height: 32px; padding: 8px 32px; font-size: 12px; font-weight: 500; line-height: 16px; }
 }
 @media screen and (max-width: 375px) {
   .banner__content { padding: 28px 20px; }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  section.sunmar:has(.banner) > article .wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
